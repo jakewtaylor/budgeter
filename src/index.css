@@ -7,6 +7,10 @@
     -webkit-touch-callout: none;
 }
 
+input {
+    -webkit-user-select: initial !important;
+}
+
 :root {
     --red: #B23438;
     --green: #32A436;
