@@ -1,20 +1,30 @@
-.jars {
+.jarsContainer {
+    overflow: hidden;
+    height: 6rem;
     margin-left: -1rem;
     margin-right: -1rem;
+    position: relative;
+}
+
+.jars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     overflow-x: scroll;
-}
-
-.jars::-webkit-scrollbar: {
-    display: none;
+    overflow-y: hidden;
+    box-sizing: content-box;
+    margin-bottom: -1rem;
 }
 
 .jarSpacer {
     min-width: 1rem;
     height: 1rem;
-    display: inline-block;
+    display: block;
 }
 
 .jar {

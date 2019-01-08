@@ -8,14 +8,16 @@ export const Jars = ({ jars }) => (
     <Section>
         <SectionTitle>Jars</SectionTitle>
 
-        <div className={styles.jars}>
-            <div className={styles.jarSpacer}></div>
+        <div className={styles.jarsContainer}>
+            <div className={styles.jars}>
+                <div className={styles.jarSpacer}></div>
 
-            {jars.map(jar => (
-                <Jar key={jar.id} {...jar} />
-            ))}
+                {jars.map(jar => (
+                    <Jar key={jar.id} {...jar} />
+                ))}
 
-            <div className={styles.jarSpacer}></div>
+                <div className={styles.jarSpacer}></div>
+            </div>
         </div>
     </Section>
 );
