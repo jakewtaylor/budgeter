@@ -1,0 +1,25 @@
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.625rem;
+}
+
+.transactionLabel {
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.transactionTimestamp {
+    font-size: 0.875rem;
+}
+
+.transactionValue {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--green);
+}
+
+.transactionValue[data-value^="-"] {
+    color: var(--red);
+}
