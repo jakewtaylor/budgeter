@@ -1,17 +1,24 @@
 .typeButtons {
     display: flex;
     justify-content: space-between;
+    margin: 0 -1em;
+    margin-bottom: 0.875rem;
+    background: var(--grey-light);
 }
 
 .typeButton {
-    width: calc(50% - .5rem);
-    padding: 0.875rem;
+    background: none;
+    width: 50%;
+    padding: 0.5rem;
     cursor: pointer;
     border: none;
     border-radius: .5rem;
     font-size: .75rem;
-    font-weight: bold;
     transition: all .2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .typeButton:focus {
@@ -19,8 +26,13 @@
 }
 
 .typeButton_active {
-    background: linear-gradient(to top, var(--blue-dark), var(--blue));
-    color: var(--white);
+    font-weight: bold;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: .25rem;
 }
 
 .amountInput {
@@ -28,8 +40,25 @@
     font-size: 4rem;
     font-weight: bold;
     margin-bottom: 0.875rem;
+    width: 100%;
 }
 
 .amountInput:focus {
     outline: 0;
+}
+
+.input {
+    border: none;
+    border-bottom: solid 2px var(--black-light);
+    background: transparent;
+    padding: .375rem .25rem;
+    width: 100%;
+    font-size: 1rem;
+    transition: all .2s;
+    margin-bottom: 0.875rem;
+}
+
+.input:focus {
+    outline: 0;
+    border-bottom-color: var(--black);
 }

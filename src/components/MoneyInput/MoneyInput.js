@@ -1,38 +1,42 @@
-import React from 'react';
-import MaskedInput from 'react-text-mask';
-import createNumberMask from 'text-mask-addons/dist/createNumberMask';
+import React, { useRef } from 'react';
+import accounting from 'accounting';
 
 export const MoneyInput = ({ value, onChange, currencySymbol, className, autoFocus = false }) => {
-    const inputMask = createNumberMask({
-        prefix: currencySymbol,
-        allowDecimal: true,
-    });
+    const inputRef = useRef(null);
+    const maskRef = useRef(null);
+
+    const formattedValue = accounting.formatMoney(parseFloat(value) / 100, currencySymbol);
+
+    const handleMaskFocus = () => {
+        maskRef.current.blur();
+        inputRef.current.focus();
+    };
 
     const handleChange = (e) => {
-        let value = e.target.value
-        value = value.replace(/[^0-9.]+/g, '');
-        if (value) {
-            value = parseInt(value, 10);
-        } else {
-            value = null;
-            // value = 0;
-        }
-
-        console.log({ value });
-
-        onChange(value);
+        onChange(e.target.value.replace(/[^\d]*/g, ''));
     };
 
     return (
-        <MaskedInput
-            value={value}
-            onChange={handleChange}
-            mask={inputMask}
-            pattern="\d*"
-            className={className}
-            placeholder={`${currencySymbol}0`}
-            autoFocus={autoFocus}
-            noValidate
-        />
+        <div style={{ position: 'relative' }}>
+            <input
+                ref={maskRef}
+                type="text"
+                className={className}
+                pattern="\d*"
+                readOnly
+                value={formattedValue}
+                onFocus={handleMaskFocus}
+            />
+
+            <input
+                ref={inputRef}
+                type="text"
+                value={value}
+                onChange={handleChange}
+                pattern="\d*"
+                className={className}
+                style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, opacity: 0, caretColor: 'transparent' }}
+            />
+        </div>
     );
 }

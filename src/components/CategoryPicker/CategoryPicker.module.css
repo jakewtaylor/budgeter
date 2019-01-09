@@ -1,0 +1,53 @@
+.categoryPicker {
+    display: flex;
+    align-items: center;
+}
+
+.categoryPicker_empty {
+    opacity: 0.6;
+}
+
+.categoryPicker_empty .categoryLabel {
+    font-weight: normal;
+}
+
+.categoryIcon {
+    font-size: 30px;
+    margin-right: .25rem;
+}
+
+.categoryLabel {
+    font-weight: bold;
+}
+
+.picker {
+    --cell-size: 25vw;
+    position: fixed;
+    bottom: -90vh;
+    left: 0;
+    right: 0;
+    height: 90vh;
+    background: var(--white);
+    border-radius: 8px 8px 0 0;
+    animation: slideIn .2s;
+    animation-fill-mode: forwards;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--cell-size));
+    grid-auto-rows: var(--cell-size);
+    box-shadow: 0 -10px 20px 0 rgba(0, 0, 0, 0.25);
+}
+
+.categoryPickIcon {
+    font-size: 36px;
+    color: var(--black);
+}
+
+@keyframes slideIn {
+    from {
+        bottom: -90vh;
+    }
+
+    to {
+        bottom: 0;
+    }
+}
