@@ -56,9 +56,27 @@
     font-size: 1rem;
     transition: all .2s;
     margin-bottom: 0.875rem;
+    border-radius: 0;
 }
 
 .input:focus {
     outline: 0;
     border-bottom-color: var(--black);
+}
+
+.submitButton {
+    width: 100%;
+    padding: .75rem;
+    background: var(--blue);
+    color: var(--white);
+    font-size: 0.875rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.submitButton:focus {
+    outline: 0;
 }

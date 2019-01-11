@@ -12,7 +12,9 @@ const mapStateToProps = (state) => {
             const { amount, timestamp } = transaction;
 
             const signifier = amount < 0 ? '-' : '+';
-            const value = Math.abs(amount).toLocaleString();
+            const value = Math.abs(amount).toLocaleString(undefined, {
+                minimumFractionDigits: Number.isInteger(amount) ? 0 : 2,
+            });
 
             return {
                 ...transaction,

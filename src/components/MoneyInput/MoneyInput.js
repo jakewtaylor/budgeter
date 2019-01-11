@@ -36,6 +36,7 @@ export const MoneyInput = ({ value, onChange, currencySymbol, className, autoFoc
                 pattern="\d*"
                 className={className}
                 style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, opacity: 0, caretColor: 'transparent' }}
+                autoFocus={autoFocus}
             />
         </div>
     );
