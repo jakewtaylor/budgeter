@@ -1,0 +1,28 @@
+.colorPicker {
+
+}
+
+.pointer {
+    width: .5rem;
+    height: 1rem;
+    // transform: translateY(.25rem);
+    background: var(--white);
+    border-radius: .25rem;
+    border: 1px solid var(--grey-light);
+}
+
+.sliderContainer {
+    position: relative;
+    width: 100%;
+    height: 1rem;
+    margin-bottom: 0.875rem;
+}
+
+.sliderContainer > * {
+    border-radius: .25rem;
+    overflow: hidden;
+}
+
+.sliderContainer_large {
+    height: 3rem;
+}

@@ -27,6 +27,10 @@
     display: block;
 }
 
+.newJar {
+
+}
+
 .jar {
     flex-shrink: 0;
     margin: 0 0.3125rem;
@@ -37,6 +41,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: var(--grey-light);
 }
 
 .jarPrimary {

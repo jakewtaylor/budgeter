@@ -1,0 +1,49 @@
+.amountInput {
+    border: none;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 0.875rem;
+    width: 100%;
+}
+
+.input {
+    border: none;
+    border-bottom: solid 2px var(--black-light);
+    background: transparent;
+    padding: .375rem .25rem;
+    width: 100%;
+    font-size: 1rem;
+    transition: all .2s;
+    margin-bottom: 0.875rem;
+    border-radius: 0;
+}
+
+.input:focus {
+    outline: 0;
+    border-bottom-color: var(--black);
+}
+
+.colorPicker {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin-bottom: 0.875rem;
+    border: 1px solid var(--grey-light) !important;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25) !important;
+}
+
+.submitButton {
+    width: 100%;
+    padding: .75rem;
+    background: var(--blue);
+    color: var(--white);
+    font-size: 0.875rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.submitButton:focus {
+    outline: 0;
+}
