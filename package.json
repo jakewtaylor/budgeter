@@ -7,7 +7,7 @@
     "body-scroll-lock": "^2.6.1",
     "moment": "^2.23.0",
     "react": "^16.7.0-alpha.2",
-    "react-color": "^2.17.0",
+    "react-color": "^2.18.1",
     "react-dom": "^16.7.0-alpha.2",
     "react-md-icon": "^1.13.0",
     "react-redux": "^6.0.0",
